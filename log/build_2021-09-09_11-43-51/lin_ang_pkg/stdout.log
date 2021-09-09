@@ -1,0 +1,22 @@
+running egg_info
+writing ../build/lin_ang_pkg/lin_ang_pkg.egg-info/PKG-INFO
+writing dependency_links to ../build/lin_ang_pkg/lin_ang_pkg.egg-info/dependency_links.txt
+writing entry points to ../build/lin_ang_pkg/lin_ang_pkg.egg-info/entry_points.txt
+writing requirements to ../build/lin_ang_pkg/lin_ang_pkg.egg-info/requires.txt
+writing top-level names to ../build/lin_ang_pkg/lin_ang_pkg.egg-info/top_level.txt
+reading manifest file '../build/lin_ang_pkg/lin_ang_pkg.egg-info/SOURCES.txt'
+writing manifest file '../build/lin_ang_pkg/lin_ang_pkg.egg-info/SOURCES.txt'
+running build
+running build_py
+copying lin_ang_pkg/lin_ang_file.py -> /root/rosdir/build/lin_ang_pkg/build/lib/lin_ang_pkg
+running install
+running install_lib
+copying /root/rosdir/build/lin_ang_pkg/build/lib/lin_ang_pkg/lin_ang_file.py -> /root/rosdir/install/lin_ang_pkg/lib/python3.8/site-packages/lin_ang_pkg
+byte-compiling /root/rosdir/install/lin_ang_pkg/lib/python3.8/site-packages/lin_ang_pkg/lin_ang_file.py to lin_ang_file.cpython-38.pyc
+running install_data
+running install_egg_info
+removing '/root/rosdir/install/lin_ang_pkg/lib/python3.8/site-packages/lin_ang_pkg-0.0.0-py3.8.egg-info' (and everything under it)
+Copying ../build/lin_ang_pkg/lin_ang_pkg.egg-info to /root/rosdir/install/lin_ang_pkg/lib/python3.8/site-packages/lin_ang_pkg-0.0.0-py3.8.egg-info
+running install_scripts
+Installing lin_ang_talk script to /root/rosdir/install/lin_ang_pkg/lib/lin_ang_pkg
+writing list of installed files to '/root/rosdir/build/lin_ang_pkg/install.log'

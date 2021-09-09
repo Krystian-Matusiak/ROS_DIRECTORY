@@ -1,0 +1,21 @@
+[0.393s] Invoking command in '/root/rosdir/src': PYTHONPATH=/root/rosdir/install/lin_ang_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/lin_ang_pkg build --build-base /root/rosdir/build/lin_ang_pkg/build install --prefix /root/rosdir/install/lin_ang_pkg --record /root/rosdir/build/lin_ang_pkg/install.log --single-version-externally-managed
+[0.688s] running egg_info
+[0.689s] writing ../build/lin_ang_pkg/lin_ang_pkg.egg-info/PKG-INFO
+[0.690s] writing dependency_links to ../build/lin_ang_pkg/lin_ang_pkg.egg-info/dependency_links.txt
+[0.690s] writing entry points to ../build/lin_ang_pkg/lin_ang_pkg.egg-info/entry_points.txt
+[0.691s] writing requirements to ../build/lin_ang_pkg/lin_ang_pkg.egg-info/requires.txt
+[0.691s] writing top-level names to ../build/lin_ang_pkg/lin_ang_pkg.egg-info/top_level.txt
+[0.758s] reading manifest file '../build/lin_ang_pkg/lin_ang_pkg.egg-info/SOURCES.txt'
+[0.759s] writing manifest file '../build/lin_ang_pkg/lin_ang_pkg.egg-info/SOURCES.txt'
+[0.760s] running build
+[0.760s] running build_py
+[0.760s] running install
+[0.762s] running install_lib
+[0.764s] running install_data
+[0.765s] running install_egg_info
+[0.767s] removing '/root/rosdir/install/lin_ang_pkg/lib/python3.8/site-packages/lin_ang_pkg-0.0.0-py3.8.egg-info' (and everything under it)
+[0.768s] Copying ../build/lin_ang_pkg/lin_ang_pkg.egg-info to /root/rosdir/install/lin_ang_pkg/lib/python3.8/site-packages/lin_ang_pkg-0.0.0-py3.8.egg-info
+[0.769s] running install_scripts
+[0.805s] Installing lin_ang_talk script to /root/rosdir/install/lin_ang_pkg/lib/lin_ang_pkg
+[0.806s] writing list of installed files to '/root/rosdir/build/lin_ang_pkg/install.log'
+[0.848s] Invoked command in '/root/rosdir/src' returned '0': PYTHONPATH=/root/rosdir/install/lin_ang_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/lin_ang_pkg build --build-base /root/rosdir/build/lin_ang_pkg/build install --prefix /root/rosdir/install/lin_ang_pkg --record /root/rosdir/build/lin_ang_pkg/install.log --single-version-externally-managed

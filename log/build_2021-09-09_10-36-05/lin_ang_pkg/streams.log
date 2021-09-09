@@ -1,0 +1,24 @@
+[0.432s] Invoking command in '/root/rosdir/lin_ang_pkg': PYTHONPATH=/root/rosdir/install/lin_ang_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/lin_ang_pkg build --build-base /root/rosdir/build/lin_ang_pkg/build install --prefix /root/rosdir/install/lin_ang_pkg --record /root/rosdir/build/lin_ang_pkg/install.log --single-version-externally-managed
+[0.799s] running egg_info
+[0.800s] writing ../build/lin_ang_pkg/lin_ang_pkg.egg-info/PKG-INFO
+[0.800s] writing dependency_links to ../build/lin_ang_pkg/lin_ang_pkg.egg-info/dependency_links.txt
+[0.800s] writing entry points to ../build/lin_ang_pkg/lin_ang_pkg.egg-info/entry_points.txt
+[0.801s] writing requirements to ../build/lin_ang_pkg/lin_ang_pkg.egg-info/requires.txt
+[0.801s] writing top-level names to ../build/lin_ang_pkg/lin_ang_pkg.egg-info/top_level.txt
+[0.880s] reading manifest file '../build/lin_ang_pkg/lin_ang_pkg.egg-info/SOURCES.txt'
+[0.882s] writing manifest file '../build/lin_ang_pkg/lin_ang_pkg.egg-info/SOURCES.txt'
+[0.882s] running build
+[0.882s] running build_py
+[0.882s] copying lin_ang_pkg/lin_ang_node.py -> /root/rosdir/build/lin_ang_pkg/build/lib/lin_ang_pkg
+[0.883s] running install
+[0.884s] running install_lib
+[0.886s] copying /root/rosdir/build/lin_ang_pkg/build/lib/lin_ang_pkg/lin_ang_node.py -> /root/rosdir/install/lin_ang_pkg/lib/python3.8/site-packages/lin_ang_pkg
+[0.887s] byte-compiling /root/rosdir/install/lin_ang_pkg/lib/python3.8/site-packages/lin_ang_pkg/lin_ang_node.py to lin_ang_node.cpython-38.pyc
+[0.890s] running install_data
+[0.891s] running install_egg_info
+[0.893s] removing '/root/rosdir/install/lin_ang_pkg/lib/python3.8/site-packages/lin_ang_pkg-0.0.0-py3.8.egg-info' (and everything under it)
+[0.894s] Copying ../build/lin_ang_pkg/lin_ang_pkg.egg-info to /root/rosdir/install/lin_ang_pkg/lib/python3.8/site-packages/lin_ang_pkg-0.0.0-py3.8.egg-info
+[0.895s] running install_scripts
+[0.934s] Installing lin_ang_talk script to /root/rosdir/install/lin_ang_pkg/lib/lin_ang_pkg
+[0.935s] writing list of installed files to '/root/rosdir/build/lin_ang_pkg/install.log'
+[0.975s] Invoked command in '/root/rosdir/lin_ang_pkg' returned '0': PYTHONPATH=/root/rosdir/install/lin_ang_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/lin_ang_pkg build --build-base /root/rosdir/build/lin_ang_pkg/build install --prefix /root/rosdir/install/lin_ang_pkg --record /root/rosdir/build/lin_ang_pkg/install.log --single-version-externally-managed

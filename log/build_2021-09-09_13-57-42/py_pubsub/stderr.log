@@ -1,0 +1,6 @@
+  File "/root/rosdir/install/py_pubsub/lib/python3.8/site-packages/py_pubsub/sub.py", line 23
+    'z = {} \n').format(msg.linear.x,msg.linear.y,msg.linear.z \
+                                                    msg.angular.x,msg.angular.y,msg.angular.z))
+                        ^
+SyntaxError: invalid syntax
+

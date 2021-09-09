@@ -1,0 +1,5 @@
+  File "/root/rosdir/install/py_pubsub/lib/python3.8/site-packages/py_pubsub/sub.py", line 5
+    from nav_msgs/msg import Odometry
+                 ^
+SyntaxError: invalid syntax
+
