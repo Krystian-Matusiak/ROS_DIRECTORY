@@ -82,7 +82,7 @@
       <pose relative_to='joint_cas_wheel_mid'>0 0 0 0 -0 0</pose>
       <inertial>
         <pose>0 0 0.0005 1.55 -0 0</pose>
-        <mass>3</mass>
+        <mass>10</mass>
         <inertia>
           <ixx>1</ixx>
           <ixy>0</ixy>
@@ -129,7 +129,7 @@
       <pose relative_to='joint_left_wheel_back'>0 0 0 0 -0 0</pose>
       <inertial>
         <pose>0 0 0.0005 1.55 -0 0</pose>
-        <mass>3</mass>
+        <mass>30</mass>
         <inertia>
           <ixx>1</ixx>
           <ixy>0</ixy>
@@ -178,7 +178,7 @@
       <pose relative_to='joint_right_wheel_back'>0 0 0 0 -0 0</pose>
       <inertial>
         <pose>0 0 0.0005 1.55 -0 0</pose>
-        <mass>3</mass>
+        <mass>30</mass>
         <inertia>
           <ixx>1</ixx>
           <ixy>0</ixy>
@@ -207,5 +207,34 @@
         </geometry>
       </visual>
     </link>
+    <static>0</static>
+    <plugin name='control_p3d' filename='libgazebo_ros_p3d.so'>
+      <always_on>1</always_on>
+      <body_name>chassis_back</body_name>
+      <topic_name>odom</topic_name>
+      <frame_name>map</frame_name>
+      <update_rate>50</update_rate>
+    </plugin>
+    <plugin name='diff_drive' filename='libgazebo_ros_diff_drive.so'>
+      <ros>
+        <namespace>/lf</namespace>
+        <remapping>cmd_lf:=cmd_lf</remapping>
+        <remapping>odom:=odom_lf</remapping>
+      </ros>
+      <left_joint>left_wheel_joint</left_joint>
+      <right_joint>right_wheel_joint</right_joint>
+      <wheel_separation>1.25</wheel_separation>
+      <wheel_diameter>0.6</wheel_diameter>
+      <max_wheel_torque>20</max_wheel_torque>
+      <max_wheel_acceleration>1.0</max_wheel_acceleration>
+      <publish_odom>1</publish_odom>
+      <publish_odom_tf>1</publish_odom_tf>
+      <publish_wheel_tf>1</publish_wheel_tf>
+      <odom_publish>1</odom_publish>
+      <odometry_frame>map</odometry_frame>
+      <odom_frame_id>odom</odom_frame_id>
+      <robot_base_frame>chassis_back</robot_base_frame>
+      <always_on>1</always_on>
+    </plugin>
   </model>
 </sdf>

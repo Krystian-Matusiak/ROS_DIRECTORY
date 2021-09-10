@@ -5,6 +5,8 @@
 <!-- =================================================================================== -->
 <!-- Revolute-Revolute Manipulator -->
 <robot name="rrbot">
+  <topic_name>/lf</topic_name>
+  <frame_name>linefollower</frame_name>
   <!-- Beams are square in length and width -->
   <!-- Beams are square in length and width -->
   <!-- Beams are square in length and width -->
@@ -12,7 +14,7 @@
   <link name="cas_wheel">
     <inertial>
       <origin rpy="1.55 0.0 0.0" xyz="0 0 0.0005"/>
-      <mass value="3"/>
+      <mass value="10"/>
       <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
     </inertial>
     <visual>
@@ -35,7 +37,7 @@
   <link name="wheel">
     <inertial>
       <origin rpy="1.55 0.0 0.0" xyz="0 0 0.0005"/>
-      <mass value="3"/>
+      <mass value="30"/>
       <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
     </inertial>
     <visual>
@@ -58,7 +60,7 @@
   <link name="wheel2">
     <inertial>
       <origin rpy="1.55 0.0 0.0" xyz="0 0 0.0005"/>
-      <mass value="3"/>
+      <mass value="30"/>
       <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
     </inertial>
     <visual>
@@ -174,4 +176,38 @@
     <origin rpy="0 0 0" xyz="0 0 -0.005"/>
     <axis rpy="0 0 0" xyz="0 1 0"/>
   </joint>
+  <gazebo>
+    <plugin filename="libgazebo_ros_p3d.so" name="control_p3d">
+      <always_on>true</always_on>
+      <body_name>chassis_back</body_name>
+      <topic_name>odom</topic_name>
+      <frame_name>map</frame_name>
+      <update_rate>50</update_rate>
+    </plugin>
+    <plugin filename="libgazebo_ros_diff_drive.so" name="diff_drive">
+      <ros>
+        <namespace>/lf</namespace>
+        <remapping>cmd_lf:=cmd_lf</remapping>
+        <remapping>odom:=odom_lf</remapping>
+      </ros>
+      <!-- wheels -->
+      <left_joint>left_wheel_joint</left_joint>
+      <right_joint>right_wheel_joint</right_joint>
+      <!-- kinematics -->
+      <wheel_separation>1.25</wheel_separation>
+      <wheel_diameter>0.6</wheel_diameter>
+      <!-- limits -->
+      <max_wheel_torque>20</max_wheel_torque>
+      <max_wheel_acceleration>1.0</max_wheel_acceleration>
+      <!-- output -->
+      <publish_odom>true</publish_odom>
+      <publish_odom_tf>true</publish_odom_tf>
+      <publish_wheel_tf>true</publish_wheel_tf>
+      <odom_publish>true</odom_publish>
+      <odometry_frame>map</odometry_frame>
+      <odom_frame_id>odom</odom_frame_id>
+      <robot_base_frame>chassis_back</robot_base_frame>
+      <always_on>true</always_on>
+    </plugin>
+  </gazebo>
 </robot>

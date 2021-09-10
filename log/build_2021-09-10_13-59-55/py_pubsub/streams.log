@@ -1,0 +1,22 @@
+[0.546s] Invoking command in '/root/rosdir/ROS_DIRECTORY/src/py_pubsub': PYTHONPATH=/root/rosdir/ROS_DIRECTORY/install/py_pubsub/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/py_pubsub build --build-base /root/rosdir/ROS_DIRECTORY/build/py_pubsub/build install --prefix /root/rosdir/ROS_DIRECTORY/install/py_pubsub --record /root/rosdir/ROS_DIRECTORY/build/py_pubsub/install.log --single-version-externally-managed
+[0.964s] running egg_info
+[0.965s] writing ../../build/py_pubsub/py_pubsub.egg-info/PKG-INFO
+[0.966s] writing dependency_links to ../../build/py_pubsub/py_pubsub.egg-info/dependency_links.txt
+[0.966s] writing entry points to ../../build/py_pubsub/py_pubsub.egg-info/entry_points.txt
+[0.967s] writing requirements to ../../build/py_pubsub/py_pubsub.egg-info/requires.txt
+[0.967s] writing top-level names to ../../build/py_pubsub/py_pubsub.egg-info/top_level.txt
+[1.059s] reading manifest file '../../build/py_pubsub/py_pubsub.egg-info/SOURCES.txt'
+[1.061s] writing manifest file '../../build/py_pubsub/py_pubsub.egg-info/SOURCES.txt'
+[1.061s] running build
+[1.061s] running build_py
+[1.062s] running install
+[1.063s] running install_lib
+[1.066s] running install_data
+[1.067s] running install_egg_info
+[1.071s] removing '/root/rosdir/ROS_DIRECTORY/install/py_pubsub/lib/python3.8/site-packages/py_pubsub-0.0.0-py3.8.egg-info' (and everything under it)
+[1.071s] Copying ../../build/py_pubsub/py_pubsub.egg-info to /root/rosdir/ROS_DIRECTORY/install/py_pubsub/lib/python3.8/site-packages/py_pubsub-0.0.0-py3.8.egg-info
+[1.073s] running install_scripts
+[1.121s] Installing listen script to /root/rosdir/ROS_DIRECTORY/install/py_pubsub/lib/py_pubsub
+[1.122s] Installing talker script to /root/rosdir/ROS_DIRECTORY/install/py_pubsub/lib/py_pubsub
+[1.123s] writing list of installed files to '/root/rosdir/ROS_DIRECTORY/build/py_pubsub/install.log'
+[1.211s] Invoked command in '/root/rosdir/ROS_DIRECTORY/src/py_pubsub' returned '0': PYTHONPATH=/root/rosdir/ROS_DIRECTORY/install/py_pubsub/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/py_pubsub build --build-base /root/rosdir/ROS_DIRECTORY/build/py_pubsub/build install --prefix /root/rosdir/ROS_DIRECTORY/install/py_pubsub --record /root/rosdir/ROS_DIRECTORY/build/py_pubsub/install.log --single-version-externally-managed
