@@ -1,0 +1,44 @@
+Gazebo multi-robot simulator, version 11.5.1
+Copyright (C) 2012 Open Source Robotics Foundation.
+Released under the Apache 2 License.
+http://gazebosim.org
+
+
+(1631256589 441759876) [Msg] Waiting for master.
+(1631256589 442468672) Failed to create connection to remote host[localhost:11345]
+(1631256590 450975827) [Msg] Connected to gazebo master @ http://127.0.0.1:11345
+(1631256590 451151668) [Msg] Publicized address: 10.102.40.235
+(1631256590 451808182) [Wrn] [GuiIface.cc:298] Couldn't locate specified .ini. Creating file at "/root/.gazebo/gui.ini"
+(1631256590 452691158) Loaded .ini file from: "/root/.gazebo/gui.ini"
+(1631256590 760065188) [Wrn] [GuiIface.cc:120] QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-root'
+(1631256591 527026015) No spacenav daemon found. Spacenav functionality is disabled
+(1631260280 996248223) [Err] [Scene.cc:2974] Light [sun] already exists. Use topic ~/light/modify to modify it.
+(1631260286 444671047) [Err] [Scene.cc:2974] Light [sun] already exists. Use topic ~/light/modify to modify it.
+(1631261247 836511184) [Wrn] [GuiIface.cc:120] Empty filename passed to function
+(1631261278 214286350) Invalid filename or directory["/root/.gazebo/models/my_robot/.model.sdf.swp"] in GAZEBO_MODEL_PATH. It's not a good idea to put extra files in a GAZEBO_MODEL_PATH because the file structure may be modified by Gazebo.
+(1631261278 214380138) Invalid filename or directory["/root/.gazebo/models/my_robot/model.config"] in GAZEBO_MODEL_PATH. It's not a good idea to put extra files in a GAZEBO_MODEL_PATH because the file structure may be modified by Gazebo.
+(1631261278 214468402) Invalid filename or directory["/root/.gazebo/models/my_robot/model.sdf"] in GAZEBO_MODEL_PATH. It's not a good idea to put extra files in a GAZEBO_MODEL_PATH because the file structure may be modified by Gazebo.
+(1631261324 79608663) Invalid filename or directory["/root/.gazebo/models/my_robot/.model.sdf.swp"] in GAZEBO_MODEL_PATH. It's not a good idea to put extra files in a GAZEBO_MODEL_PATH because the file structure may be modified by Gazebo.
+(1631261324 79712039) Invalid filename or directory["/root/.gazebo/models/my_robot/model.config"] in GAZEBO_MODEL_PATH. It's not a good idea to put extra files in a GAZEBO_MODEL_PATH because the file structure may be modified by Gazebo.
+(1631261324 79799909) Invalid filename or directory["/root/.gazebo/models/my_robot/model.sdf"] in GAZEBO_MODEL_PATH. It's not a good idea to put extra files in a GAZEBO_MODEL_PATH because the file structure may be modified by Gazebo.
+(1631261425 467461677) Invalid filename or directory["/root/.gazebo/models/my_robot/.model.sdf.swp"] in GAZEBO_MODEL_PATH. It's not a good idea to put extra files in a GAZEBO_MODEL_PATH because the file structure may be modified by Gazebo.
+(1631261425 467560099) Invalid filename or directory["/root/.gazebo/models/my_robot/model.config"] in GAZEBO_MODEL_PATH. It's not a good idea to put extra files in a GAZEBO_MODEL_PATH because the file structure may be modified by Gazebo.
+(1631261425 467651165) Invalid filename or directory["/root/.gazebo/models/my_robot/model.sdf"] in GAZEBO_MODEL_PATH. It's not a good idea to put extra files in a GAZEBO_MODEL_PATH because the file structure may be modified by Gazebo.
+(1631261445 970417694) Invalid filename or directory["/root/.gazebo/models/my_robot/.model.sdf.swp"] in GAZEBO_MODEL_PATH. It's not a good idea to put extra files in a GAZEBO_MODEL_PATH because the file structure may be modified by Gazebo.
+(1631261445 970515238) Invalid filename or directory["/root/.gazebo/models/my_robot/model.config"] in GAZEBO_MODEL_PATH. It's not a good idea to put extra files in a GAZEBO_MODEL_PATH because the file structure may be modified by Gazebo.
+(1631261445 970605264) Invalid filename or directory["/root/.gazebo/models/my_robot/model.sdf"] in GAZEBO_MODEL_PATH. It's not a good idea to put extra files in a GAZEBO_MODEL_PATH because the file structure may be modified by Gazebo.
+(1631261445 970691199) Invalid filename or directory["/root/.gazebo/models/my_robot/model.sdf~"] in GAZEBO_MODEL_PATH. It's not a good idea to put extra files in a GAZEBO_MODEL_PATH because the file structure may be modified by Gazebo.
+(1631261446 64472089) Invalid filename or directory["/root/.gazebo/models/my_robot/.model.sdf.swp"] in GAZEBO_MODEL_PATH. It's not a good idea to put extra files in a GAZEBO_MODEL_PATH because the file structure may be modified by Gazebo.
+(1631261446 64570309) Invalid filename or directory["/root/.gazebo/models/my_robot/model.config"] in GAZEBO_MODEL_PATH. It's not a good idea to put extra files in a GAZEBO_MODEL_PATH because the file structure may be modified by Gazebo.
+(1631261446 64660820) Invalid filename or directory["/root/.gazebo/models/my_robot/model.sdf"] in GAZEBO_MODEL_PATH. It's not a good idea to put extra files in a GAZEBO_MODEL_PATH because the file structure may be modified by Gazebo.
+(1631261468 391336858) Invalid filename or directory["/root/.gazebo/models/my_robot/.model.sdf.swp"] in GAZEBO_MODEL_PATH. It's not a good idea to put extra files in a GAZEBO_MODEL_PATH because the file structure may be modified by Gazebo.
+(1631261468 391435441) Invalid filename or directory["/root/.gazebo/models/my_robot/model.config"] in GAZEBO_MODEL_PATH. It's not a good idea to put extra files in a GAZEBO_MODEL_PATH because the file structure may be modified by Gazebo.
+(1631261468 391526997) Invalid filename or directory["/root/.gazebo/models/my_robot/model.sdf"] in GAZEBO_MODEL_PATH. It's not a good idea to put extra files in a GAZEBO_MODEL_PATH because the file structure may be modified by Gazebo.
+(1631261559 705939487) Invalid filename or directory["/root/.gazebo/models/my_robot/.model.sdf.swp"] in GAZEBO_MODEL_PATH. It's not a good idea to put extra files in a GAZEBO_MODEL_PATH because the file structure may be modified by Gazebo.
+(1631261559 706041192) Invalid filename or directory["/root/.gazebo/models/my_robot/model.config"] in GAZEBO_MODEL_PATH. It's not a good idea to put extra files in a GAZEBO_MODEL_PATH because the file structure may be modified by Gazebo.
+(1631261559 706132520) Invalid filename or directory["/root/.gazebo/models/my_robot/model.sdf"] in GAZEBO_MODEL_PATH. It's not a good idea to put extra files in a GAZEBO_MODEL_PATH because the file structure may be modified by Gazebo.
+(1631261628 535776368) Invalid filename or directory["/root/.gazebo/models/my_robot/.model.sdf.swp"] in GAZEBO_MODEL_PATH. It's not a good idea to put extra files in a GAZEBO_MODEL_PATH because the file structure may be modified by Gazebo.
+(1631261628 535873389) Invalid filename or directory["/root/.gazebo/models/my_robot/model.config"] in GAZEBO_MODEL_PATH. It's not a good idea to put extra files in a GAZEBO_MODEL_PATH because the file structure may be modified by Gazebo.
+(1631261628 535963439) Invalid filename or directory["/root/.gazebo/models/my_robot/model.sdf"] in GAZEBO_MODEL_PATH. It's not a good idea to put extra files in a GAZEBO_MODEL_PATH because the file structure may be modified by Gazebo.
+(1631261656 493326892) Invalid filename or directory["/root/.gazebo/models/my_robot/model.config"] in GAZEBO_MODEL_PATH. It's not a good idea to put extra files in a GAZEBO_MODEL_PATH because the file structure may be modified by Gazebo.
+(1631261656 493429576) Invalid filename or directory["/root/.gazebo/models/my_robot/model.sdf"] in GAZEBO_MODEL_PATH. It's not a good idea to put extra files in a GAZEBO_MODEL_PATH because the file structure may be modified by Gazebo.

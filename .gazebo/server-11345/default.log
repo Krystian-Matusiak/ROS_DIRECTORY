@@ -1,0 +1,17 @@
+Gazebo multi-robot simulator, version 11.5.1
+Copyright (C) 2012 Open Source Robotics Foundation.
+Released under the Apache 2 License.
+http://gazebosim.org
+
+
+(1631256589 479357621) [Msg] Waiting for master.
+(1631256589 489747118) [Msg] Connected to gazebo master @ http://127.0.0.1:11345
+(1631256589 489803313) [Msg] Publicized address: 10.102.40.235
+(1631256589 839188053) [Msg] Loading world file [/opt/ros/foxy/share/gazebo_plugins/worlds/gazebo_ros_diff_drive_demo.world]
+(1631256589 896651472) Init world[default]
+(1631260195 687619510) [Err] [World.cc:2441] Unable to find model[ground_plane]
+(1631260195 687685023) [Err] [World.cc:2441] Unable to find model[unit_box]
+(1631260196 488585305) [Err] [World.cc:2441] Unable to find model[ground_plane]
+(1631260198 45538825) [Err] [World.cc:2441] Unable to find model[ground_plane]
+(1631260212 216648603) [Err] [World.cc:2441] Unable to find model[ground_plane]
+(1631260213 118271413) [Err] [World.cc:2441] Unable to find model[ground_plane]
