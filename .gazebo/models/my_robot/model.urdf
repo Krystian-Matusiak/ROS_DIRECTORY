@@ -7,17 +7,18 @@
 <robot name="rrbot">
   <!-- Beams are square in length and width -->
   <!-- Beams are square in length and width -->
+  <!-- Beams are square in length and width -->
   <!-- WHEELS -->
   <link name="cas_wheel">
     <inertial>
-      <origin rpy="1.55 0.0 0.0" xyz="0 0 0.0025"/>
-      <mass value="1"/>
+      <origin rpy="1.55 0.0 0.0" xyz="0 0 0.0005"/>
+      <mass value="3"/>
       <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
     </inertial>
     <visual>
       <origin rpy="1.55 0.0 0.0" xyz="0 0 0 "/>
       <geometry>
-        <sphere radius="0.012"/>
+        <sphere radius="0.005"/>
       </geometry>
       <material name="">
         <color rgba="1.0 0.0 0.0 1.0"/>
@@ -27,20 +28,20 @@
     <collision>
       <origin rpy="1.55 0.0 0.0" xyz="0 0 0 "/>
       <geometry>
-        <sphere radius="0.012"/>
+        <sphere radius="0.005"/>
       </geometry>
     </collision>
   </link>
   <link name="wheel">
     <inertial>
-      <origin rpy="1.55 0.0 0.0" xyz="0 0 0.0025"/>
-      <mass value="1"/>
+      <origin rpy="1.55 0.0 0.0" xyz="0 0 0.0005"/>
+      <mass value="3"/>
       <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
     </inertial>
     <visual>
       <origin rpy="1.55 0.0 0.0" xyz="0 0 0 "/>
       <geometry>
-        <cylinder length="0.015" radius="0.012"/>
+        <cylinder length="0.008" radius="0.012"/>
       </geometry>
       <material name="">
         <color rgba="1.0 0.0 0.0 1.0"/>
@@ -50,20 +51,20 @@
     <collision>
       <origin rpy="1.55 0.0 0.0" xyz="0 0 0 "/>
       <geometry>
-        <cylinder length="0.015" radius="0.012"/>
+        <cylinder length="0.008" radius="0.012"/>
       </geometry>
     </collision>
   </link>
   <link name="wheel2">
     <inertial>
-      <origin rpy="1.55 0.0 0.0" xyz="0 0 0.0025"/>
-      <mass value="1"/>
+      <origin rpy="1.55 0.0 0.0" xyz="0 0 0.0005"/>
+      <mass value="3"/>
       <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
     </inertial>
     <visual>
       <origin rpy="1.55 0.0 0.0" xyz="0 0 0 "/>
       <geometry>
-        <cylinder length="0.015" radius="0.012"/>
+        <cylinder length="0.008" radius="0.012"/>
       </geometry>
       <material name="">
         <color rgba="1.0 0.0 0.0 1.0"/>
@@ -73,62 +74,88 @@
     <collision>
       <origin rpy="1.55 0.0 0.0" xyz="0 0 0 "/>
       <geometry>
-        <cylinder length="0.015" radius="0.012"/>
+        <cylinder length="0.008" radius="0.012"/>
       </geometry>
     </collision>
   </link>
   <!-- Chassis front -->
   <link name="chassis_front">
     <visual>
-      <origin rpy="0 0 0" xyz="0 0 0.0025"/>
+      <origin rpy="0 0 0" xyz="0 0 0.0005"/>
       <geometry>
-        <box size="0.06 0.016 0.005"/>
+        <box size="0.01 0.04 0.001"/>
       </geometry>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="0 0 0.0025"/>
+      <origin rpy="0 0 0" xyz="0 0 0.0005"/>
       <geometry>
-        <box size="0.06 0.016 0.005"/>
+        <box size="0.01 0.04 0.001"/>
       </geometry>
     </collision>
     <inertial>
-      <origin rpy="0 0 0" xyz="0 0 0.0025"/>
-      <mass value="1"/>
+      <origin rpy="0 0 0" xyz="0 0 0.0005"/>
+      <mass value="0.1"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+  </link>
+  <!-- Chassis mid -->
+  <link name="chassis_mid">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0.0005"/>
+      <geometry>
+        <box size="0.03 0.01 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0.0005"/>
+      <geometry>
+        <box size="0.03 0.01 0.001"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0.0005"/>
+      <mass value="0.3"/>
       <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
     </inertial>
   </link>
   <!-- Chassis back -->
   <link name="chassis_back">
     <visual>
-      <origin rpy="0 0 0" xyz="0 0 0.0025"/>
+      <origin rpy="0 0 0" xyz="0 0 0.0005"/>
       <geometry>
-        <box size="0.025 0.05 0.005"/>
+        <box size="0.025 0.04 0.001"/>
       </geometry>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="0 0 0.0025"/>
+      <origin rpy="0 0 0" xyz="0 0 0.0005"/>
       <geometry>
-        <box size="0.025 0.05 0.005"/>
+        <box size="0.025 0.04 0.001"/>
       </geometry>
     </collision>
     <inertial>
-      <origin rpy="0 0 0" xyz="0 0 0.0025"/>
-      <mass value="1"/>
+      <origin rpy="0 0 0" xyz="0 0 0.0005"/>
+      <mass value="2"/>
       <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
     </inertial>
   </link>
   <!-- Joint between both chassises -->
-  <joint name="joint_front_back" type="fixed">
+  <joint name="joint_back_mid" type="fixed">
     <parent link="chassis_back"/>
+    <child link="chassis_mid"/>
+    <origin rpy="0 0 0" xyz="0.0275 0 0"/>
+  </joint>
+  <!-- Joint between both chassises -->
+  <joint name="joint_mid_front" type="fixed">
+    <parent link="chassis_mid"/>
     <child link="chassis_front"/>
-    <origin rpy="0 0 0" xyz="0.042499999999999996 0 0"/>
+    <origin rpy="0 0 0" xyz="0.02 0 0"/>
   </joint>
   <!-- Joint between chassis back and wheel -->
   <joint name="joint_left_wheel_back" type="continuous">
     <parent link="chassis_back"/>
     <child link="wheel"/>
     <limit effort="0.0" lower="0.0" upper="0.0" velocity="0.0"/>
-    <origin rpy="0 0 0" xyz="0 0.0325 0"/>
+    <origin rpy="0 0 0" xyz="0 0.024 0"/>
     <axis rpy="0 0 0" xyz="0 1 0"/>
   </joint>
   <!-- Joint between chassis back and wheel -->
@@ -136,7 +163,15 @@
     <parent link="chassis_back"/>
     <child link="wheel2"/>
     <limit effort="0.0" lower="0.0" upper="0.0" velocity="0.0"/>
-    <origin rpy="0 0 0" xyz="0 -0.0325 0"/>
+    <origin rpy="0 0 0" xyz="0 -0.024 0"/>
+    <axis rpy="0 0 0" xyz="0 1 0"/>
+  </joint>
+  <!-- Joint between chassis back and wheel -->
+  <joint name="joint_cas_wheel_mid" type="continuous">
+    <parent link="chassis_mid"/>
+    <child link="cas_wheel"/>
+    <limit effort="0.0" lower="0.0" upper="0.0" velocity="0.0"/>
+    <origin rpy="0 0 0" xyz="0 0 -0.005"/>
     <axis rpy="0 0 0" xyz="0 1 0"/>
   </joint>
 </robot>

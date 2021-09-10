@@ -1,25 +1,29 @@
 <?xml version="1.0"?>
 <!-- Revolute-Revolute Manipulator -->
 <robot name="rrbot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:property name="x_ch_front" value="0.01" />   <!-- Beams are square in length and width -->
+  <xacro:property name="y_ch_front" value="0.04" />   <!-- Beams are square in length and width -->
+  <xacro:property name="z_ch_front" value="0.001" />   <!-- Beams are square in length and width -->
 
-  <xacro:property name="x_ch_front" value="0.06" />   <!-- Beams are square in length and width -->
-  <xacro:property name="y_ch_front" value="0.016" />   <!-- Beams are square in length and width -->
-  <xacro:property name="z_ch_front" value="0.005" />   <!-- Beams are square in length and width -->
+  <xacro:property name="x_ch_mid" value="0.03" />   <!-- Beams are square in length and width -->
+  <xacro:property name="y_ch_mid" value="0.01" />   <!-- Beams are square in length and width -->
+  <xacro:property name="z_ch_mid" value="0.001" />   <!-- Beams are square in length and width -->
 
   <xacro:property name="x_ch_back" value="0.025" />   <!-- Beams are square in length and width -->
-  <xacro:property name="y_ch_back" value="0.05" />   <!-- Beams are square in length and width -->
-  <xacro:property name="z_ch_back" value="0.005" />   <!-- Beams are square in length and width -->
+  <xacro:property name="y_ch_back" value="0.04" />   <!-- Beams are square in length and width -->
+  <xacro:property name="z_ch_back" value="0.001" />   <!-- Beams are square in length and width -->
   
   <!-- WHEELS -->
 
   <xacro:property name="wheel_rpy" value="1.55 0.0 0.0"/>
   <xacro:property name="wheel_radius" value="0.012"/>
-  <xacro:property name="wheel_lenght" value="0.015"/>
+  <xacro:property name="wheel_lenght" value="0.008"/>
+  <xacro:property name="cas_wheel_radius" value="0.005"/>
 
   <link name="cas_wheel">
       <inertial>
-        <origin xyz="0 0 ${z_ch_front/2}" rpy="${wheel_rpy}"/>
-        <mass value="1"/>
+        <origin xyz="0 0 ${z_ch_mid/2}" rpy="${wheel_rpy}"/>
+        <mass value="3"/>
         <inertia
           ixx="1.0" ixy="0.0" ixz="0.0"
           iyy="1.0" iyz="0.0"
@@ -28,7 +32,7 @@
       <visual>
         <origin xyz="0 0 0 " rpy="${wheel_rpy}"/>
         <geometry>
-          <sphere radius="${wheel_radius}" />
+          <sphere radius="${cas_wheel_radius}" />
         </geometry>
         <material name="">
           <color rgba="1.0 0.0 0.0 1.0"/>
@@ -38,15 +42,15 @@
       <collision>
         <origin xyz="0 0 0 " rpy="${wheel_rpy}"/>
         <geometry>
-          <sphere radius="${wheel_radius}"/>
+          <sphere radius="${cas_wheel_radius}"/>
         </geometry>
       </collision>
     </link>
 
   <link name="wheel">
       <inertial>
-        <origin xyz="0 0 ${z_ch_front/2}" rpy="${wheel_rpy}"/>
-        <mass value="1"/>
+        <origin xyz="0 0 ${z_ch_mid/2}" rpy="${wheel_rpy}"/>
+        <mass value="3"/>
         <inertia
           ixx="1.0" ixy="0.0" ixz="0.0"
           iyy="1.0" iyz="0.0"
@@ -72,8 +76,8 @@
 
       <link name="wheel2">
       <inertial>
-        <origin xyz="0 0 ${z_ch_front/2}" rpy="${wheel_rpy}"/>
-        <mass value="1"/>
+        <origin xyz="0 0 ${z_ch_mid/2}" rpy="${wheel_rpy}"/>
+        <mass value="3"/>
         <inertia
           ixx="1.0" ixy="0.0" ixz="0.0"
           iyy="1.0" iyz="0.0"
@@ -97,6 +101,7 @@
       </collision>
     </link>
 
+
   <!-- Chassis front -->
   <link name="chassis_front">
     <visual>
@@ -115,7 +120,33 @@
 
     <inertial>
       <origin xyz="0 0 ${z_ch_front/2}" rpy="0 0 0"/>
-      <mass value="1"/>
+      <mass value="0.1"/>
+      <inertia
+	  ixx="1.0" ixy="0.0" ixz="0.0"
+	  iyy="1.0" iyz="0.0"
+	  izz="1.0"/>
+    </inertial>
+  </link>
+
+  <!-- Chassis mid -->
+  <link name="chassis_mid">
+    <visual>
+      <origin xyz="0 0 ${z_ch_mid/2}" rpy="0 0 0"/>
+      <geometry>
+	<box size="${x_ch_mid} ${y_ch_mid} ${z_ch_mid}"/>
+      </geometry>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 ${z_ch_mid/2}" rpy="0 0 0"/>
+      <geometry>
+	<box size="${x_ch_mid} ${y_ch_mid} ${z_ch_mid}"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <origin xyz="0 0 ${z_ch_mid/2}" rpy="0 0 0"/>
+      <mass value="0.3"/>
       <inertia
 	  ixx="1.0" ixy="0.0" ixz="0.0"
 	  iyy="1.0" iyz="0.0"
@@ -143,7 +174,7 @@
 
     <inertial>
       <origin xyz="0 0 ${z_ch_back/2}" rpy="0 0 0"/>
-      <mass value="1"/>
+      <mass value="2"/>
       <inertia
 	  ixx="1.0" ixy="0.0" ixz="0.0"
 	  iyy="1.0" iyz="0.0"
@@ -153,10 +184,17 @@
 
 
   <!-- Joint between both chassises -->
-  <joint name="joint_front_back" type="fixed">
+  <joint name="joint_back_mid" type="fixed">
     <parent link="chassis_back"/>
+    <child link="chassis_mid"/>
+    <origin xyz="${ (x_ch_mid+x_ch_back) /2} 0 0" rpy="0 0 0"/>
+  </joint>
+
+   <!-- Joint between both chassises -->
+  <joint name="joint_mid_front" type="fixed">
+    <parent link="chassis_mid"/>
     <child link="chassis_front"/>
-    <origin xyz="${ (x_ch_front+x_ch_back) /2} 0 0" rpy="0 0 0"/>
+    <origin xyz="${ (x_ch_mid+x_ch_front) /2} 0 0" rpy="0 0 0"/>
   </joint>
 
   <!-- Joint between chassis back and wheel -->
@@ -179,11 +217,11 @@
   </joint>
 
   <!-- Joint between chassis back and wheel -->
-  <joint name="joint_cas_wheel_front" type="continuous">
-    <parent link="chassis_front"/>
+  <joint name="joint_cas_wheel_mid" type="continuous">
+    <parent link="chassis_mid"/>
     <child link="cas_wheel"/>
     <limit lower="0.0" upper="0.0" effort="0.0" velocity="0.0"/>
-    <origin xyz="0 ${-y_ch_back/2-wheel_lenght/2} 0" rpy="0 0 0"/>
+    <origin xyz="0 0 ${-cas_wheel_radius}" rpy="0 0 0"/>
     <axis xyz="0 1 0" rpy="0 0 0"/>
   </joint>
 
