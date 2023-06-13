@@ -1,7 +1,7 @@
 
 # Preparation
 
-At first there is a need to install ros2 (better that ros1). When this readme was written latest version was rolling ridley:
+At first there is a need to install ros2 (better that ros1). When this readme was written latest version was rolling ridley. In this url you can follow the more detailed instructions (package installing etc).
 
 https://docs.ros.org/en/rolling/Installation.html
 
@@ -35,4 +35,10 @@ In third shell you can run example node that simulates nemo CAN that will publis
 ros2 run py_pubsub nemo
 ```
 
+py_pubsub is example package that has to be installed.
 
+# Future posibilities
+
+There is something liek roslaunch that enables to launch multiple nodes. The only thing that has to be done is to configure XML file.
+
+Each node can be contained in package. We can distinguish main application package (GUI, PID etc), test package (mocked data that simulates e.g. nemo data or camera video stream) and real_robot package (real camera nodes, CAN_nemo). 
