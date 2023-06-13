@@ -1,3 +1,0 @@
-[console_scripts]
-lin_ang_talk = lin_ang_pkg.lin_ang_node:main
-

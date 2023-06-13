@@ -1,7 +1,0 @@
-  File "/root/rosdir/install/py_pubsub/lib/python3.8/site-packages/py_pubsub/sub.py", line 23
-    'z = {} \n').format(msg.pose.pose.position.x,\
-                                                    msg.pose.pose.position.y,\
-                                                  
-                                                                              ^
-SyntaxError: unexpected character after line continuation character
-

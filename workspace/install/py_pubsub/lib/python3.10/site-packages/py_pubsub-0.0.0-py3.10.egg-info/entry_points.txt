@@ -1,0 +1,5 @@
+[console_scripts]
+gui = py_pubsub.gui:main
+nemo = py_pubsub.nemo:main
+pid = py_pubsub.pid:main
+
